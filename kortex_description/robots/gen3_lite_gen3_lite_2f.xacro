@@ -28,6 +28,7 @@
 
     <xacro:include filename="$(find kortex_description)/robots/kortex_robot.xacro" />
 
+    <!-- revised world->base_link-->
     <link name="world" />
     <xacro:load_robot
         parent="world"

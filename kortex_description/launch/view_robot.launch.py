@@ -33,20 +33,20 @@ def generate_launch_description():
             "robot_type",
             description="Type/series of robot.",
             choices=["gen3", "gen3_lite"],
-            default_value="gen3",
+            default_value="gen3_lite",
         )
     )
     declared_arguments.append(
         DeclareLaunchArgument(
             "gripper",
-            default_value='""',
+            default_value="gen3_lite_2f",
             description="Name of the gripper attached to the arm",
         )
     )
     declared_arguments.append(
         DeclareLaunchArgument(
             "dof",
-            default_value="7",
+            default_value="6",
             description="Robot's dof",
         )
     )

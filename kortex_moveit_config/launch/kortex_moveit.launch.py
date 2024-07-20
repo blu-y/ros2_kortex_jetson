@@ -53,7 +53,8 @@ def generate_launch_description():
     declared_arguments.append(DeclareLaunchArgument("dof", description="DoF of robot."))
     declared_arguments.append(
         DeclareLaunchArgument(
-            "robot_ip", description="IP address by which the robot can be reached."
+            "robot_ip",
+            description="IP address by which the robot can be reached."
         )
     )
     # General arguments
