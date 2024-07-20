@@ -1,3 +1,8 @@
+# Jetpack 6.0 & Gen3 Lite'
+```
+ros2 launch kortex_bringup gen3_lite.launch.py
+```
+
 # ROS 2 Kortex
 > Kinova® Kortex™ is the common software platform behind all of the products in the Gen3 family (Gen3 and Gen3 lite). It unifies the inner workings of the various robots and their related external tools, like the API. <br />
 > https://www.kinovarobotics.com/product/gen3-robots
