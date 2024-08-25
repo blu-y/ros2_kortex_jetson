@@ -5,6 +5,7 @@ moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControll
 moveit_simple_controller_manager:
   controller_names:
     - joint_trajectory_controller
+    - gen3_lite_gripper_controller
 
   joint_trajectory_controller:
     type: FollowJointTrajectory
