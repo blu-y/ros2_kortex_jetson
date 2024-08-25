@@ -9,7 +9,7 @@ controller_manager:
     twist_controller:
       type: picknik_twist_controller/PicknikTwistController
 
-    gen3_lite_2f_gripper_controller:
+    gen3_lite_gripper_controller:
       type: position_controllers/GripperActionController
       # type: joint_trajectory_controller/JointTrajectoryController
 
@@ -41,7 +41,7 @@ fault_controller:
     joints:
       []
 
-gen3_lite_2f_gripper_controller:
+gen3_lite_gripper_controller:
   ros__parameters:
     joints:
       - right_finger_bottom_joint

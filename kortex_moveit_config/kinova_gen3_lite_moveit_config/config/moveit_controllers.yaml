@@ -17,7 +17,7 @@ moveit_simple_controller_manager:
       - joint_4
       - joint_5
       - joint_6
-  gen3_lite_2f_gripper_controller:
+  gen3_lite_gripper_controller:
     type: GripperCommand
     joints:
       - right_finger_bottom_joint
