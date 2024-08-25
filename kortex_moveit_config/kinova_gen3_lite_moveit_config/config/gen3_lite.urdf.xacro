@@ -7,8 +7,10 @@
 
     <!-- Import control_xacro -->
     <xacro:include filename="gen3_lite.ros2_control.xacro" />
+    <xacro:include filename="gen3_lite_hand.ros2_control.xacro" />
 
 
     <xacro:gen3_lite_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
-
+    <xacro:gen3_lite_hand_ros2_control name="HandFakeSystem"/>
+    <!-- <xacro:gen3_lite_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)" ros2_control_hardware_type="$(arg ros2_control_hardware_type)"/> -->
 </robot>
