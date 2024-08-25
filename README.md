@@ -11,7 +11,7 @@ For the Gen3 Lite arm, the integrated gripper is considered as a joint, so to co
 ros2 topic pub /joint_trajectory_controller/joint_trajectory trajectory_msgs/JointTrajectory "{
   joint_names: [joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, right_finger_bottom_joint],
   points: [
-    { positions: [0, 0, 0, 0, 0, 0, 1], time_from_start: { sec: 10 } },
+    { positions: [0, 0, 0, 0, 0, 0, 1], time_from_start: { sec: 5 } },
   ]
 }" -1
 ```
@@ -71,5 +71,16 @@ ros2 launch kortex_bringup gen3_lite.launch.py launch_rviz:=false
 ```bash
 ros2 launch kinova_gen3_lite_moveit_config robot.launch.py robot_ip:=192.168.1.10
 ```
+
+#### Memos
+```bash
+ros2 topic pub /joint_trajectory_controller/joint_trajectory trajectory_msgs/JointTrajectory "{
+  joint_names: [joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, right_finger_bottom_joint],
+  points: [
+    { positions: [0, 1.7453, 2.6878, 1.5708, 0.6283, -1.5708, 0], time_from_start: { sec: 5 } },
+  ]
+}" -1
+```
+
 # Forked from Kinovarobotics/ros2_kortex
 [refer to original repository](https://github.com/Kinovarobotics/ros2_kortex)
