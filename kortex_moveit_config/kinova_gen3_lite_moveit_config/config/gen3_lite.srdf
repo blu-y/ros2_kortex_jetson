@@ -48,9 +48,9 @@
     <!-- hand -->
     <group name="hand">
         <joint name="right_finger_bottom_joint"/>
-        <passive_joint name="left_finger_bottom_joint"/>
-        <passive_joint name="left_finger_tip_joint"/>
-        <passive_joint name="right_finger_tip_joint"/>
+        <joint name="left_finger_bottom_joint"/>
+        <joint name="left_finger_tip_joint"/>
+        <joint name="right_finger_tip_joint"/>
     </group>
     <group name="gen3_lite_arm_hand">
         <group name="gen3_lite_arm"/>
