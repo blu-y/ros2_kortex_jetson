@@ -47,6 +47,11 @@
 
     <!-- hand -->
     <group name="hand">
+        <!-- <link name="gripper_base_link"/>
+        <link name="left_finger_dist_link"/>
+        <link name="left_finger_prox_link"/>
+        <link name="right_finger_dist_link"/>
+        <link name="right_finger_prox_link"/> -->
         <joint name="right_finger_bottom_joint"/>
         <passive_joint name="left_finger_bottom_joint"/>
         <passive_joint name="left_finger_tip_joint"/>
@@ -60,7 +65,7 @@
         <joint name="right_finger_bottom_joint" value="0.0"/> 
     </group_state>
     <group_state group="hand" name="close">
-        <joint name="right_finger_bottom_joint" value="1.0"/> 
+        <joint name="right_finger_bottom_joint" value="0.8"/> 
     </group_state>
 
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
