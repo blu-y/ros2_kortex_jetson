@@ -34,7 +34,7 @@
 
     # Gripper grasp frame transform [x,y,z,r,p,y]
     # grasp_frame_transform: [0.0, 0.0, 0.1, 1.571, 0.785, 1.571]
-    grasp_frame_transform: [0.0, 0.0, 0.15, 0.0, -1.571, 0.0]
+    grasp_frame_transform: [0.0, 0.0, 0.12, 0.0, -1.571, 0.0]
 
     # Place pose [x,y,z,r,p,y]
     place_pose: [0.4, -0.15, 0.0, 0.0, 0.0, 0.0]

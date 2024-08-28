@@ -47,11 +47,11 @@
 
     <!-- hand -->
     <group name="hand">
-        <!-- <link name="gripper_base_link"/>
+        <link name="gripper_base_link"/>
         <link name="left_finger_dist_link"/>
         <link name="left_finger_prox_link"/>
         <link name="right_finger_dist_link"/>
-        <link name="right_finger_prox_link"/> -->
+        <link name="right_finger_prox_link"/>
         <joint name="right_finger_bottom_joint"/>
         <passive_joint name="left_finger_bottom_joint"/>
         <passive_joint name="left_finger_tip_joint"/>
