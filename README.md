@@ -89,7 +89,7 @@ ros2 launch kinova_gen3_lite_moveit_config pickplace_gen3.launch.py
 ros2 topic pub /joint_trajectory_controller/joint_trajectory trajectory_msgs/JointTrajectory "{
   joint_names: [joint_1, joint_2, joint_3, joint_4, joint_5, joint_6],
   points: [
-    { positions: [0, 1.7453, 2.6878, 1.5708, 0.6283, -1.5708], time_from_start: { sec: 5 } },
+    { positions: [0, 1.7453, 2.6878, 1.5708, 0.6283, -1.5708], time_from_start: { sec: 10 } },
   ]
 }" -1
 ```
