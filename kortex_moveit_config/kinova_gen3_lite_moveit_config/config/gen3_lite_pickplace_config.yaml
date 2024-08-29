@@ -2,6 +2,7 @@
   ros__parameters:
     # Total planning attempts
     max_solutions: 100
+    execute: true
 
     # Planning group and link names
     arm_group_name: "gen3_lite_arm"
