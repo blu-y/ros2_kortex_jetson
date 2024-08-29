@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="gen3_lite">
     <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+    <xacro:arg name="ros2_control_hardware_type" default="mock_components" />
 
     <!-- Import gen3_lite urdf file -->
     <xacro:include filename="$(find kortex_description)/robots/gen3_lite.urdf" />
@@ -9,8 +10,10 @@
     <xacro:include filename="gen3_lite.ros2_control.xacro" />
     <xacro:include filename="gen3_lite_hand.ros2_control.xacro" />
 
+    <xacro:gen3_lite_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)" ros2_control_hardware_type="$(arg ros2_control_hardware_type)"/>
+    <xacro:gen3_lite_hand_ros2_control name="HandFakeSystem" initial_positions_file="$(arg initial_positions_file)" ros2_control_hardware_type="$(arg ros2_control_hardware_type)"/>
 
-    <xacro:gen3_lite_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
-    <xacro:gen3_lite_hand_ros2_control name="HandFakeSystem"/>
+    <!-- <xacro:gen3_lite_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+    <xacro:gen3_lite_hand_ros2_control name="HandFakeSystem"/> -->
     <!-- <xacro:gen3_lite_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)" ros2_control_hardware_type="$(arg ros2_control_hardware_type)"/> -->
 </robot>
