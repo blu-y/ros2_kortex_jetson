@@ -6,18 +6,29 @@ from launch_ros.actions import Node
 from moveit_configs_utils import MoveItConfigsBuilder
 
 
-def generate_launch_description(): 
+def generate_launch_description():
+
+    launch_arguments = {
+        "robot_ip": "192.168.1.10",
+        "use_fake_hardware": "false",
+        "gripper": "gen3_lite_2f",
+        "gripper_joint_name": "right_finger_bottom_joint",
+        "dof": "6",
+        "gripper_max_velocity": "100.0",
+        "gripper_max_force": "100.0",
+    }
 
     moveit_config = (
-        MoveItConfigsBuilder(
-        "gen3_lite", package_name="kinova_gen3_lite_moveit_config"
-        )
-        .robot_description(file_path = "config/gen3_lite.urdf.xacro")
+        MoveItConfigsBuilder("gen3", package_name="kinova_gen3_lite_moveit_config")
+        .robot_description(mappings=launch_arguments)
         .trajectory_execution(file_path="config/moveit_controllers.yaml")
-        .planning_pipelines(pipelines=["ompl"])
+        .planning_scene_monitor(
+            publish_robot_description=True, publish_robot_description_semantic=True
+        )
+        .planning_pipelines(pipelines=["ompl", "pilz_industrial_motion_planner"])
         .to_moveit_configs()
     )
- 
+    
     pick_place_demo = Node(
         package="moveit_task_constructor_demo",
         executable="pick_place_demo",
@@ -33,3 +44,4 @@ def generate_launch_description():
     )
 
     return LaunchDescription([pick_place_demo])
+
