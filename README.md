@@ -67,7 +67,7 @@ ros2 launch moveit2_tutorials demo.launch.py rviz_config:=panda_moveit_config_de
 #### Run Moveit2
 ##### With Real Robot
 ```bash
-ros2 launch kortex_bringup gen3_lite.launch.py launch_rviz:=false
+ros2 launch kortex_bringup gen3_lite.launch.py robot_ip:=192.168.1.10 launch_rviz:=false
 ```
 ```bash
 ros2 launch kinova_gen3_lite_moveit_config robot.launch.py robot_ip:=192.168.1.10
