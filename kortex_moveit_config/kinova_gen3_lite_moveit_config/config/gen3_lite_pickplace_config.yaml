@@ -6,8 +6,8 @@
 
     # Planning group and link names
     arm_group_name: "gen3_lite_arm"
-    eef_name: "hand"
-    hand_group_name: "hand"
+    eef_name: "gripper"
+    hand_group_name: "gripper"
     hand_frame: "end_effector_link"
 
     # Poses
