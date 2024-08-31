@@ -52,7 +52,6 @@
         <link name="right_finger_dist_link"/>
         <link name="left_finger_prox_link"/>
         <link name="left_finger_dist_link"/>
-
         <joint name="right_finger_bottom_joint"/>
         <passive_joint name="left_finger_bottom_joint"/>
         <passive_joint name="left_finger_tip_joint"/>
@@ -80,7 +79,6 @@
         <joint name="left_finger_bottom_joint" value="0.7"/> 
         <!-- <joint name="left_finger_tip_joint" value="0.8"/> 
         <joint name="right_finger_tip_joint" value="0.8"/>  -->
-        
     </group_state>
 
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->

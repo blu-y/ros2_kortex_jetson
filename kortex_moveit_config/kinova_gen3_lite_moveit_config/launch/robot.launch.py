@@ -58,6 +58,10 @@ def launch_setup(context, *args, **kwargs):
         .to_moveit_configs()
     )
 
+    move_group_capabilities = {
+        "capabilities": "move_group/ExecuteTaskSolutionCapability"
+    }
+
     moveit_config.moveit_cpp.update({"use_sim_time": use_sim_time.perform(context) == "true"})
     move_group_capabilities = {"capabilities": "move_group/ExecuteTaskSolutionCapability"}
     move_group_node = Node(
@@ -66,7 +70,7 @@ def launch_setup(context, *args, **kwargs):
         output="screen",
         parameters=[
             moveit_config.to_dict(),
-            move_group_capabilities
+            move_group_capabilities,
         ],
     )
 
