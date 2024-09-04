@@ -81,7 +81,7 @@ ros2 launch kinova_gen3_lite_moveit_config robot.launch.py robot_ip:=yyy.yyy.yyy
 ```
 ##### Pickplace demo
 ```bash
-ros2 launch kinova_gen3_lite_moveit_config pickplace_gen3.launch.py 
+ros2 launch kinova_gen3_lite_moveit_config pickplace.launch.py 
 ```
 
 ### Memos
